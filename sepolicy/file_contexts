@@ -1,0 +1,52 @@
+# Bluetooth
+/persist/.bt_nv.bin						u:object_r:bluetooth_data_file:s0
+/efs/bluetooth(/.*)?						u:object_r:bluetooth_efs_file:s0
+
+/efs/wifi(/.*)?							u:object_r:wifi_efs_file:s0
+/dev/sec-nfc		  					u:object_r:nfc_device:s0
+/dev/pn547		  					u:object_r:nfc_device:s0
+/dev/i2c-1  							u:object_r:audio_device:s0
+
+# Camera
+/sys/devices/virtual/camera(/.*)?       			u:object_r:sysfs_camera:s0
+/data/cam_socket.*                      			u:object_r:camera_socket:s0
+
+# Sensors
+/efs/prox_cal                   				u:object_r:sensors_efs_file:s0
+
+# CMHW
+/sys/devices/virtual/timed_output/vibrator(/.*)?              	u:object_r:sysfs_vibeamp:s0
+
+/data/snd(/.*)?                                     		u:object_r:snd_data_file:s0
+
+# block devices
+/dev/block/bootdevice/by-name/efs				u:object_r:efs_block_device:s0
+/dev/block/bootdevice/by-name/fota				u:object_r:misc_block_device:s0
+
+# RFS
+/sys/kernel/debug/rmt_storage(/.*)?				u:object_r:rfs_debugfs_file:s0
+
+# Macloader
+/system/bin/macloader                                   	u:object_r:macloader_exec:s0
+
+# sysfs - battery/charger
+/sys/devices/battery\.[0-9]+/power_supply(/.*)?         	u:object_r:sysfs_batteryinfo:s0
+/sys/devices/i2c\.[0-9]+/i2c-[0-9]+/[0-9]+-[a-z0-9]+/max[a-z0-9]+-charger/power_supply(/.*)? 		u:object_r:sysfs_batteryinfo:s0
+/sys/devices/i2c\.[0-9]+/i2c-[0-9]+/[0-9]+-[a-z0-9]+/power_supply(/.*)? 				u:object_r:sysfs_batteryinfo:s0
+
+# EFS
+/dev/block/platform/soc\.0/7824900\.sdhci/by-name/efs           u:object_r:efs_block_device:s0
+/efs/FactoryApp(/.*)?                                           u:object_r:app_efs_file:s0
+
+# FRP
+/dev/block/platform/soc\.0/7824900\.sdhci/by-name/persistent    u:object_r:frp_block_device:s0
+# Sensors
+/data/iNemo_gbias.dat                                           u:object_r:sensors_data_file:s0
+/data/iNemoEngine_gbias.dat                                     u:object_r:sensors_data_file:s0
+/data/system/yas_lib.cfg                                        u:object_r:sensors_data_file:s0
+/sys/bus/iio/devices                                            u:object_r:sysfs_sensors:s0
+/sys/devices/.*/i2c-[0-9]/[0-9]-[0-9a-f]+/iio:device[0-9](/.*)? u:object_r:sysfs_sensors:s0
+/sys/devices/iio:device[0-9](/.*)?                              u:object_r:sysfs_sensors:s0
+
+# Uncrypt
+/dev/block/platform/soc\.0/7824900\.sdhci/by-name/fota          u:object_r:misc_block_device:s0
