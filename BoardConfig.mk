@@ -7,7 +7,7 @@ LOCAL_PATH := device/samsung/gt510lte
 include device/samsung/gt510lte/board/*.mk
 
 # Asserts
-TARGET_OTA_ASSERT_DEVICE := gt510lte,gt510ltexx,SM-T550
+TARGET_OTA_ASSERT_DEVICE := gt510lte,gt510ltexx,SM-T555
 
 # Kernel
 TARGET_KERNEL_VARIANT_CONFIG := msm8916_sec_gt510lte_eur_defconfig
