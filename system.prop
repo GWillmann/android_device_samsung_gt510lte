@@ -6,6 +6,3 @@ ro.config.low_ram=false
 
 # Screen
 ro.sf.lcd_density=160
-
-# Telephony
-telephony.lteOnCdmaDevice=0
